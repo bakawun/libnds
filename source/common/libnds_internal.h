@@ -59,6 +59,9 @@ __TransferRegion volatile * __transferRegion() {
 	return &transfer;
 }
 
+void __libnds_exit(int rc);
+
+
 
 //---------------------------------------------------------------------------------
 #endif

@@ -129,6 +129,10 @@ static inline bool isDSiMode() {
 	return __dsimode;
 }
 
+void systemReset();
+
+void __attribute__((weak)) systemErrorExit(int rc);
+
 //--------------------------------------------------------------
 //    ARM9 section
 //--------------------------------------------------------------
@@ -218,6 +222,10 @@ u8* getHeapEnd();
 //! returns current heap limit
 u8* getHeapLimit();
 
+void __attribute__((weak)) initSystem(void);
+
+void __attribute__((weak)) systemErrorExit(int rc);
+
 #endif //ARM9
 
 //--------------------------------------------------------------
@@ -284,6 +292,12 @@ void powerOff(PM_Bits bits) {
 
 void readUserSettings();
 void systemShutDown();
+
+int writeFirmware(u32 address, void * source, u32 size);
+
+void firmwareMsgHandler(int bytes, void *user_data);
+
+void powerValueHandler(u32 value, void* user_data);
 
 #endif /* ARM7 */
 

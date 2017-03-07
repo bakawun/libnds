@@ -1139,6 +1139,8 @@ void bgExtPaletteDisableSub(void)
   REG_DISPCNT_SUB &= ~DISPLAY_BG_EXT_PALETTE; 
 }
 
+bool checkIfText(int id);
+
 
 #ifdef __cplusplus
 }

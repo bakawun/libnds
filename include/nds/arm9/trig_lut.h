@@ -133,6 +133,14 @@ s16 asinLerp(s16 par);
 */
 s16 acosLerp(s16 par);
 
+s32 sinLutLookup(int i);
+
+s32 tanLutLookup(int i);
+
+int asinComp(const void *a, const void *b);
+
+int atanComp(const void *a, const void *b);
+
 
 
 

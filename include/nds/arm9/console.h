@@ -235,6 +235,8 @@ void consoleClear(void);
 */
 void consoleDebugInit(DebugDevice device);
 
+void consoleLoadFont(PrintConsole* console);
+
 #ifdef __cplusplus
 }
 #endif

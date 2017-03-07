@@ -1,8 +1,9 @@
+#include <nds/arm9/cache.h>
+#include <nds/arm9/sdmmc.h>
 #include <nds/disc_io.h>
 #include <nds/fifocommon.h>
 #include <nds/fifomessages.h>
 #include <nds/system.h>
-#include <nds/arm9/cache.h>
 
 //---------------------------------------------------------------------------------
 bool sdio_Startup() {

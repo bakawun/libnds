@@ -63,6 +63,22 @@ uint16 touchRead(uint32 command);
 uint32 touchReadTemperature(int * t1, int * t2);
 bool touchPenDown();
 
+TWL_CODE u32 readTSCReg(u32 reg);
+
+TWL_CODE void readTSCRegArray(u32 reg, void *buffer, int size);
+
+TWL_CODE u32 writeTSCReg(u32 reg, u32 value);
+
+u8 CheckStylus();
+
+int16 readTouchValue(uint32 command, int16 *dist_max, u8 *err);
+
+void UpdateRange(uint8 *this_range, int16 last_dist_max, u8 data_error, u8 tsc_touched);
+
+void touchReadDSMode(touchPosition *touchPos);
+
+TWL_CODE void touchReadDSiMode(touchPosition *touchPos);
+
 #ifdef __cplusplus
 }
 #endif

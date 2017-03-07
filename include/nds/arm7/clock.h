@@ -133,6 +133,8 @@ void integerToBCD(uint8 * data, uint32 length);
 void initClockIRQ();
 void resyncClock();
 
+void syncRTC();
+
 #ifdef __cplusplus
 }
 #endif

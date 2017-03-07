@@ -143,6 +143,24 @@ static inline void micOff(void) {
 
 void installSoundFIFO(void);
 
+int getFreeChannel(void);
+
+int getFreePSGChannel(void);
+
+int getFreeNoiseChannel(void);
+
+void micSwapHandler(u8* buffer, int length);
+
+void soundDataHandler(int bytes, void *user_data);
+
+void enableSound();
+
+void disableSound();
+
+void soundCommandHandler(u32 command, void* userdata);
+
+
+
 #ifdef __cplusplus
 }
 #endif

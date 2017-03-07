@@ -181,6 +181,14 @@ int keyboardGetChar(void);
 */
 int keyboardUpdate(void);
 
+void keyboardShiftState(void);
+
+void swapKeyGfx(int key, bool pressed);
+
+ssize_t keyboardRead(struct _reent *r, void *unused, char *ptr, size_t len);
+
+
+
 #ifdef __cplusplus
 }
 #endif

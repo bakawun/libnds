@@ -248,6 +248,7 @@ static inline void leaveCriticalSection(int oldIME) {
 	REG_IME = oldIME;
 }
 
+void irqDummy(void);
 
 #ifdef __cplusplus
 }

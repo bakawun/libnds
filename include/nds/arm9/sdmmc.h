@@ -1,7 +1,7 @@
 /*
- nand.h
+ sdmmc.h
 
- Copyright (c) 2016 Dave "WinterMute" Murphy
+ Copyright (c) 2017 Dave "WinterMute" Murphy
 	
  Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
@@ -26,8 +26,8 @@
 */
 
 
-#ifndef NDS_NAND_INCLUDE
-#define NDS_NAND_INCLUDE
+#ifndef NDS_SDMMC_INCLUDE
+#define NDS_SDMMC_INCLUDE
 
 #include <unistd.h>
 
@@ -35,19 +35,19 @@
 extern "C" {
 #endif
 
-bool nand_ReadSectors(sec_t sector, sec_t numSectors,void* buffer);
-bool nand_WriteSectors(sec_t sector, sec_t numSectors,const void* buffer);
-ssize_t nand_GetSize();
+bool sdio_Startup();
 
-bool nand_Startup();
+bool sdio_IsInserted();
 
-bool nand_IsInserted();
+bool sdio_ReadSectors(sec_t sector, sec_t numSectors,void* buffer);
 
-bool nand_ClearStatus();
+bool sdio_WriteSectors(sec_t sector, sec_t numSectors,const void* buffer);
 
-bool nand_Shutdown() ;
+bool sdio_ClearStatus();
+
+bool sdio_Shutdown();
 
 #ifdef __cplusplus
 }
 #endif
-#endif // NDS_NAND_INCLUDE
+#endif // NDS_SDMMC_INCLUDE

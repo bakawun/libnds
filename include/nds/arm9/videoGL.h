@@ -1551,6 +1551,36 @@ GL_STATIC_INL
 	}
 }
 
+void vramBlock_init( s_vramBlock *mb );
+
+s_vramBlock* vramBlock_Construct( uint8 *start, uint8 *end );
+
+void vramBlock_terminate( s_vramBlock *mb );
+
+void vramBlock_Deconstruct( s_vramBlock *mb );
+
+uint8* vramBlock__allocateBlock( s_vramBlock *mb, struct s_SingleBlock *block, uint8 *addr, uint32 size );
+
+uint32 vramBlock__deallocateBlock( s_vramBlock *mb, struct s_SingleBlock *block );
+
+uint8* vramBlock_examineSpecial( s_vramBlock *mb, uint8 *addr, uint32 size, uint8 align );
+
+uint32 vramBlock_allocateSpecial( s_vramBlock *mb, uint8 *addr, uint32 size );
+
+uint32 vramBlock_allocateBlock( s_vramBlock *mb, uint32 size, uint8 align );
+
+uint32 vramBlock_deallocateBlock( s_vramBlock *mb, uint32 index );
+
+void vramBlock_deallocateAll( s_vramBlock *mb );
+
+uint8* vramBlock_getAddr( s_vramBlock *mb, uint32 index );
+
+uint32 vramBlock_getSize( s_vramBlock *mb, uint32 index );
+
+void removePaletteFromTexture( gl_texture_data *tex );
+
+uint16* vramGetBank(uint16 *addr);
+
 
 #endif // #ifndef VIDEOGL_ARM9_INCLUDE
 

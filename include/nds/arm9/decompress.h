@@ -68,6 +68,10 @@ void decompress(const void* data, void* dst, DecompressType type);
 */
 void decompressStream(const void* data, void* dst, DecompressType type, getByteCallback readCB, getHeaderCallback getHeaderCB);
 
+int getHeader(uint8 *source, uint16 *dest, uint32 arg);
+
+uint8 readByte(uint8 *source);
+
 #ifdef __cplusplus
 }
 #endif

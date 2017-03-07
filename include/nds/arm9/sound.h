@@ -180,6 +180,10 @@ int soundMicRecord(void *buffer, u32 bufferLength, MicFormat format, int freq, M
 */
 void soundMicOff(void);
 
+void micBufferHandler(int bytes, void* user_data);
+
+
+
 #ifdef __cplusplus
 }
 #endif

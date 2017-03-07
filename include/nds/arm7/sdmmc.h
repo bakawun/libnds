@@ -177,4 +177,18 @@ static inline void setckl(u32 data) {
     sdmmc_mask16(REG_SDCLKCTL, 0x0, 0x100);
 }
 
+int geterror(struct mmcdevice *ctx);
+
+void setTarget(struct mmcdevice *ctx);
+
+void sdmmc_send_command(struct mmcdevice *ctx, uint32_t cmd, uint32_t args);
+
+int sdmmc_readsectors(struct mmcdevice *device, u32 sector_no, u32 numsectors, void *out);
+
+int sdmmc_writesectors(struct mmcdevice *device, u32 sector_no, u32 numsectors, void *in);
+
+void sdmmcMsgHandler(int bytes, void *user_data);
+
+void sdmmcValueHandler(u32 value, void* user_data);
+
 #endif

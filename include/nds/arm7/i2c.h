@@ -62,4 +62,20 @@ enum i2cDevices {
 u8 i2cWriteRegister(u8 device, u8 reg, u8 data);
 u8 i2cReadRegister(u8 device, u8 reg);
 
+void i2cDelay();
+
+void i2cStop(u8 arg0);
+
+u8 i2cGetResult();
+
+u8 i2cGetData();
+
+void i2cSetDelay(u8 device);
+
+u8 i2cSelectDevice(u8 device);
+
+u8 i2cSelectRegister(u8 reg);
+
+TWL_CODE void i2cIRQHandler();
+
 #endif // I2C_ARM7_INCLUDE

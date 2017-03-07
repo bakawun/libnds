@@ -186,6 +186,20 @@ int motion_read_ain_1(void);
 */
 int motion_read_ain_2(void);
 
+unsigned char motion_spi(unsigned char in_byte);
+
+void motion_MK6_sensor_mode(void);
+
+void motion_MK6_EEPROM_mode(void);
+
+int motion_pak_is_inserted(void);
+
+int motion_card_is_inserted(void);
+
+int motion_enable(int card_type);
+
+
+
 #ifdef __cplusplus
 }
 #endif
